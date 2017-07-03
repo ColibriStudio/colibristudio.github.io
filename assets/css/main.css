@@ -1,0 +1,134 @@
+@font-face {
+    font-family: roboto;
+    src: url('../media/fonts/Roboto-Regular.ttf');
+}
+@font-face {
+    font-family: robotoThin;
+    src: url('../media/fonts/Roboto-Thin.ttf');
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+*, *:after, *:before {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+}
+ul {
+    padding: 0;
+    margin: 0;
+}
+.main_block {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('../media/images/main.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: 1s;
+}
+.main_block.active {
+    background-position: bottom center;
+    transition: 1s;
+}
+.slogan {
+    width: 644px;
+    height: 198px;
+    background-color: rgba(255,255,255,.4);
+    font-family: robotoTHin;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    font-size: 13px;
+    position: relative;
+    opacity: 1;
+    transition: 1s;
+}
+.slogan:after {
+    content: "";
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(255,255,255,.4);
+    border-bottom: none;
+    border-left: none;
+}
+.slogan:before {
+    content: "";
+    position: absolute;
+    bottom: -14px;
+    left: -14px;
+    width: 40px;
+    height: 40px;
+    border: 5px solid rgba(255,255,255,.4);
+    border-top: none;
+    border-right: none;
+}
+.begining_logo {
+    position: absolute;
+    width: 330px;
+    height: 205px;
+    bottom: -303px;
+    right: 18px;
+    transition: 1s;
+}
+.main_block.active .begining_logo {
+    position: absolute;
+    width: 330px;
+    height: 205px;
+    bottom: 0;
+    right: 18px;
+    transition: 1s;
+}
+.begining {
+    width: 330px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.collibri {
+    width: 229px;
+    position: absolute;
+    top: -98px;
+    left: -18px;
+}
+.main_block.active .slogan {
+    opacity: 0;
+    transition: 1s;
+}
+.line_l {
+    width: 2px;
+    height: 0px;
+    position: absolute;
+    right: 87px;
+    bottom: 100%;
+    background-color: white;
+    transition: 1s;
+}
+.main_block.active .line_l {
+    width: 2px;
+    height: 160px;
+    position: absolute;
+    right: 87px;
+    bottom: 17px;
+    background-color: white;
+    transition: 1s;
+}
